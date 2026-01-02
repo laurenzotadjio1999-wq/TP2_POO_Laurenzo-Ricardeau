@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecac7d55-5bbb-4371-a619-be3b4ef86de6" name="Changes" comment="import du fiuchier gestion_donnees">
-      <change beforePath="$PROJECT_DIR$/operations_CRUD.py" beforeDir="false" afterPath="$PROJECT_DIR$/operations_CRUD.py" afterDir="false" />
-    </list>
+    <list default="true" id="ecac7d55-5bbb-4371-a619-be3b4ef86de6" name="Changes" comment="Fonction afficherTout et QTable" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -88,7 +86,7 @@
       <updated>1767042225295</updated>
       <workItem from="1767042226554" duration="13586000" />
       <workItem from="1767078160770" duration="13055000" />
-      <workItem from="1767395592582" duration="339000" />
+      <workItem from="1767395592582" duration="759000" />
     </task>
     <task id="LOCAL-00001" summary="interface_graphique">
       <option name="closed" value="true" />
@@ -130,7 +128,23 @@
       <option name="project" value="LOCAL" />
       <updated>1767393496584</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Fonction afficherTout et QTable">
+      <option name="closed" value="true" />
+      <created>1767395990151</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1767395990151</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Fonction afficherTout et QTable">
+      <option name="closed" value="true" />
+      <created>1767396180022</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1767396180022</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,7 +156,8 @@
     <MESSAGE value="deuxieme mise à jour" />
     <MESSAGE value="fonction du bouton Créer Table" />
     <MESSAGE value="import du fiuchier gestion_donnees" />
-    <option name="LAST_COMMIT_MESSAGE" value="import du fiuchier gestion_donnees" />
+    <MESSAGE value="Fonction afficherTout et QTable" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fonction afficherTout et QTable" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TP2_POO_Laurenzo_Ricardeau$interface_graphique.coverage" NAME="interface_graphique Coverage Results" MODIFIED="1767392431774" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
