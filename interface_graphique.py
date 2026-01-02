@@ -18,8 +18,8 @@ fenetre.setLayout(grid)
 # création des Qlabels
 #Création d'un message de Bienvenu
 message = "*********************************************************\n"
-message += "*          BIENVENU DANS NOTRE CARNET D'ADRESSE                  *\n"
-message += "********************************************************"
+message += "*          BIENVENU DANS NOTRE CARNET D'ADRESSE                         ***\n"
+message += "*********************************************************"
 label_bienvenue = QLabel(message)
 grid.addWidget(label_bienvenue, 0, 2, 1, 6)
 label_bienvenue.setStyleSheet("font-family: Calibri; font-weight: bold;")
@@ -40,31 +40,30 @@ grid.addWidget(btn2, 2,8)
 #btn2.clicked.connect(InsererDansTablePersonne)
 
 #Création des champs pour le bouton "inserer"
-labelID = QLabel("ID :")
+labelTelephone = QLabel("Telephone :")
 labelNom = QLabel("Nom :")
 labelPrenom = QLabel("Prénom :")
 labelMail = QLabel("courriel :")
 
-lineEditID = QLineEdit(fenetre)
-lineEditID.setGeometry(50, 150, 100, 30)
-grid.addWidget(labelID, 2,0)
-grid.addWidget(lineEditID, 2,1)
-
 lineEditNom = QLineEdit(fenetre)
 lineEditNom.setGeometry(150, 150, 100, 30)
-grid.addWidget(labelNom, 2,2)
-grid.addWidget(lineEditNom, 2,3)
+grid.addWidget(labelNom, 2,0)
+grid.addWidget(lineEditNom, 2,1)
 
 lineEditPreNom = QLineEdit(fenetre)
 lineEditPreNom.setGeometry(150, 150, 100, 30)
-grid.addWidget(labelPrenom, 2,4)
-grid.addWidget(lineEditPreNom, 2,5)
+grid.addWidget(labelPrenom, 2,2)
+grid.addWidget(lineEditPreNom, 2,3)
 
 lineEditMail = QLineEdit(fenetre)
 lineEditMail.setGeometry(350, 150, 100, 30)
-grid.addWidget(labelMail, 2,6)
-grid.addWidget(lineEditMail, 2,7)
+grid.addWidget(labelMail, 2,4)
+grid.addWidget(lineEditMail, 2,5)
 
+lineEditTelephone = QLineEdit(fenetre)
+lineEditTelephone.setGeometry(450, 150, 100, 30)
+grid.addWidget(labelTelephone, 2,6)
+grid.addWidget(lineEditTelephone, 2,7)
 
 #Création du boutton afficher tout
 btn3 = QPushButton(fenetre)
