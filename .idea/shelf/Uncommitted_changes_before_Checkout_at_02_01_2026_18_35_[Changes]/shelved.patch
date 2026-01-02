@@ -1,0 +1,18 @@
+Index: operations_CRUD.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import sqlite3\r\nfrom PyQt6.QtWidgets import QApplication, QWidget, QPushButton, QLineEdit, QTableWidget, QTableWidgetItem\r\n\r\ndef InsererDansAnnuaire():\r\n    print(\"inser dans la table\")\r\n    conn = sqlite3.connect(\"Annuaire.db\")\r\n    cursor = conn.cursor()\r\n    # requette ici\r\n    cursor.execute(\r\n        \"INSERT INTO Annuaire VALUES (\" + lineEditNom.text() + \",'\" + lineEditPreNom.text() + \"','\" + lineEditcourriel.text() + \"','\" + lineEditTelephone.text() + \"');\")\r\n    conn.commit()\r\n    AfficherTout()
+===================================================================
+diff --git a/operations_CRUD.py b/operations_CRUD.py
+--- a/operations_CRUD.py	(revision 546cc949417630a44be7fff075ad627ff98f3a41)
++++ b/operations_CRUD.py	(date 1767396564742)
+@@ -1,6 +1,9 @@
++
+ import sqlite3
++
+ from PyQt6.QtWidgets import QApplication, QWidget, QPushButton, QLineEdit, QTableWidget, QTableWidgetItem
+ 
++
+ def InsererDansAnnuaire():
+     print("inser dans la table")
+     conn = sqlite3.connect("Annuaire.db")

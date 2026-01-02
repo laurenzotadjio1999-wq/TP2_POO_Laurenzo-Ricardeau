@@ -23,7 +23,6 @@ def AfficherTout():
     # requette ici
     cursor.execute("SELECT * FROM adresse")
     resultat = cursor.fetchall()
-
  # QTable
     qtab.setRowCount(len(resultat))
     qtab.setColumnCount(4)
