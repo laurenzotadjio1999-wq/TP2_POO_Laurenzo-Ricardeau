@@ -30,7 +30,7 @@ btn1 = QPushButton(fenetre)
 btn1.setText("Créer Table")
 btn1.setGeometry(500, 100, 100, 30)
 grid.addWidget(btn1, 1,8)
-#btn1.clicked.connect(CreerTable)
+btn1.clicked.connect(gestion_donnees.CreerTable)
 
 #Création du boutton "inserer"
 btn2 = QPushButton(fenetre)
