@@ -1,5 +1,7 @@
 import sqlite3
 from PyQt6.QtWidgets import QApplication, QWidget, QPushButton, QLineEdit, QTableWidget, QTableWidgetItem
+import interface_graphique
+import gestion_donnees
 
 def InsererDansAnnuaire():
     print("inser dans la table")
