@@ -1,0 +1,57 @@
+Index: interface_graphique.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\r\n# Importation des packages necessaire.\r\nfrom PyQt6.QtWidgets import QApplication, QWidget, QPushButton, QLineEdit, QTableWidget, QTableWidgetItem, QLabel,QGridLayout\r\n\r\n\r\n#Creation de notre fenêtre:\r\napp = QApplication([])\r\nfenetre = QWidget()\r\nfenetre.setWindowTitle(\"TP2_POO_Laurenzo-Ricardeau\")\r\nfenetre.setGeometry(200, 200, 650, 500)\r\n\r\n\r\n\r\n# grid layout\r\ngrid = QGridLayout()\r\nfenetre.setLayout(grid)\r\n\r\n# création des Qlabels\r\n#Création d'un message de Bienvenu\r\nmessage = \"*********************************************************\\n\"\r\nmessage += \"*          BIENVENU DANS NOTRE CARNET D'ADRESSE                         ***\\n\"\r\nmessage += \"*********************************************************\"\r\nlabel_bienvenue = QLabel(message)\r\ngrid.addWidget(label_bienvenue, 0, 2, 1, 6)\r\nlabel_bienvenue.setStyleSheet(\"font-family: Calibri; font-weight: bold;\")\r\n\r\n\r\n#Création du boutton \"créer la table\"\r\nbtn1 = QPushButton(fenetre)\r\nbtn1.setText(\"Créer Table\")\r\nbtn1.setGeometry(500, 100, 100, 30)\r\ngrid.addWidget(btn1, 1,8)\r\nbtn1.clicked.connect(gestion_donnees.CreerTable)\r\n\r\n#Création du boutton \"inserer\"\r\nbtn2 = QPushButton(fenetre)\r\nbtn2.setText(\"INSERER\")\r\nbtn2.setGeometry(500, 150, 100, 30)\r\ngrid.addWidget(btn2, 2,8)\r\n#btn2.clicked.connect(InsererDansTablePersonne)\r\n\r\n#Création des champs pour le bouton \"inserer\"\r\nlabelTelephone = QLabel(\"Telephone :\")\r\nlabelNom = QLabel(\"Nom :\")\r\nlabelPrenom = QLabel(\"Prénom :\")\r\nlabelMail = QLabel(\"courriel :\")\r\n\r\nlineEditNom = QLineEdit(fenetre)\r\nlineEditNom.setGeometry(150, 150, 100, 30)\r\ngrid.addWidget(labelNom, 2,0)\r\ngrid.addWidget(lineEditNom, 2,1)\r\n\r\nlineEditPreNom = QLineEdit(fenetre)\r\nlineEditPreNom.setGeometry(150, 150, 100, 30)\r\ngrid.addWidget(labelPrenom, 2,2)\r\ngrid.addWidget(lineEditPreNom, 2,3)\r\n\r\nlineEditMail = QLineEdit(fenetre)\r\nlineEditMail.setGeometry(350, 150, 100, 30)\r\ngrid.addWidget(labelMail, 2,4)\r\ngrid.addWidget(lineEditMail, 2,5)\r\n\r\nlineEditTelephone = QLineEdit(fenetre)\r\nlineEditTelephone.setGeometry(450, 150, 100, 30)\r\ngrid.addWidget(labelTelephone, 2,6)\r\ngrid.addWidget(lineEditTelephone, 2,7)\r\n\r\n#Création du boutton afficher tout\r\nbtn3 = QPushButton(fenetre)\r\nbtn3.setText(\"AfficherTout\")\r\nbtn3.setGeometry(500, 250, 100, 30)\r\ngrid.addWidget(btn3, 5,8)\r\n#btn3.clicked.connect(AfficherTout)\r\n\r\n\r\n#Création du boutton \"modifier\"\r\nbtn4 = QPushButton(fenetre)\r\nbtn4.setText(\"MODIFIER\")\r\nbtn4.setGeometry(500, 250, 100, 30)\r\ngrid.addWidget(btn4, 3,8)\r\n\r\n# Création du \"QTable\" pour l'affichage des différents enregistrements\r\nqtab = QTableWidget(fenetre)\r\nqtab.setRowCount(8)\r\nqtab.setColumnCount(4)\r\nqtab.setGeometry(100, 250, 450, 200)\r\nqtab.setHorizontalHeaderLabels([ 'Nom', 'Prénom', 'Courriel','Téléphone'])\r\ngrid.addWidget(qtab, 5, 0, 2, 8)\r\n\r\n#2- Créer un boutton supprimer\r\nlabelSuppID = QLabel(\"ID :\")\r\nbtn5 = QPushButton(fenetre)\r\nbtn5.setText(\"SUPPRIMER\")\r\nbtn5.setGeometry(500, 200, 100, 30)\r\ngrid.addWidget(btn5, 4,8)\r\n#btn5.clicked.connect(SupprimerId)\r\nlineEditSuppID = QLineEdit(fenetre)\r\nlineEditSuppID.setGeometry(350, 200, 100, 30)\r\ngrid.addWidget(labelSuppID, 4,6)\r\ngrid.addWidget(lineEditSuppID, 4,7 )\r\n\r\n\r\n\r\n\r\n# affichage de la fenetre + execution de l'application ... :)\r\nfenetre.show()\r\napp.exec()
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/interface_graphique.py b/interface_graphique.py
+--- a/interface_graphique.py	(revision 0d799c26bf96316b653d8fb49f1554b21b55859c)
++++ b/interface_graphique.py	(date 1767393440791)
+@@ -1,7 +1,7 @@
+ 
+ # Importation des packages necessaire.
+ from PyQt6.QtWidgets import QApplication, QWidget, QPushButton, QLineEdit, QTableWidget, QTableWidgetItem, QLabel,QGridLayout
+-
++import gestion_donnees
+ 
+ #Creation de notre fenêtre:
+ app = QApplication([])
+Index: .idea/TP2_POO_Laurenzo-Ricardeau.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module type=\"PYTHON_MODULE\" version=\"4\">\r\n  <component name=\"NewModuleRootManager\">\r\n    <content url=\"file://$MODULE_DIR$\" />\r\n    <orderEntry type=\"jdk\" jdkName=\"Python 3.14\" jdkType=\"Python SDK\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n  </component>\r\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/TP2_POO_Laurenzo-Ricardeau.iml b/.idea/TP2_POO_Laurenzo-Ricardeau.iml
+--- a/.idea/TP2_POO_Laurenzo-Ricardeau.iml	(revision 42aa31cc7eb35c124cd5b3dfa1a6f26b8d0b0778)
++++ b/.idea/TP2_POO_Laurenzo-Ricardeau.iml	(date 1767393382218)
+@@ -2,7 +2,7 @@
+ <module type="PYTHON_MODULE" version="4">
+   <component name="NewModuleRootManager">
+     <content url="file://$MODULE_DIR$" />
+-    <orderEntry type="jdk" jdkName="Python 3.14" jdkType="Python SDK" />
++    <orderEntry type="jdk" jdkName="Python 3.13" jdkType="Python SDK" />
+     <orderEntry type="sourceFolder" forTests="false" />
+   </component>
+ </module>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"Black\">\r\n    <option name=\"sdkName\" value=\"Python 3.14\" />\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" project-jdk-name=\"Python 3.14\" project-jdk-type=\"Python SDK\" />\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 42aa31cc7eb35c124cd5b3dfa1a6f26b8d0b0778)
++++ b/.idea/misc.xml	(date 1767393382225)
+@@ -3,5 +3,5 @@
+   <component name="Black">
+     <option name="sdkName" value="Python 3.14" />
+   </component>
+-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.14" project-jdk-type="Python SDK" />
++  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.13" project-jdk-type="Python SDK" />
+ </project>
+\ No newline at end of file
