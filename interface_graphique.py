@@ -1,7 +1,7 @@
 
 # Importation des packages necessaire.
 from PyQt6.QtWidgets import QApplication, QWidget, QPushButton, QLineEdit, QTableWidget, QTableWidgetItem, QLabel,QGridLayout
-
+import gestion_donnees
 
 #Creation de notre fenêtre:
 app = QApplication([])
