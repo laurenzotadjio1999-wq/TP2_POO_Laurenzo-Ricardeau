@@ -2,7 +2,7 @@
 # Importation des packages necessaire.
 from PyQt6.QtWidgets import QApplication, QWidget, QPushButton, QLineEdit, QTableWidget, QTableWidgetItem, QLabel,QGridLayout
 import gestion_donnees
-import operations_crud
+import operations_CRUD
 
 #Creation de notre fenêtre:
 app = QApplication([])
@@ -38,13 +38,13 @@ btn2 = QPushButton(fenetre)
 btn2.setText("INSERER")
 btn2.setGeometry(500, 150, 100, 30)
 grid.addWidget(btn2, 2,8)
-btn2.clicked.connect(operations_crud.Inserter)
+btn2.clicked.connect(operations_CRUD.InsererDansAnnuaire)
 
 #Création des champs pour le bouton "inserer"
 labelTelephone = QLabel("Telephone :")
 labelNom = QLabel("Nom :")
 labelPrenom = QLabel("Prénom :")
-labelMail = QLabel("courriel :")
+labelCourriel = QLabel("courriel :")
 
 lineEditNom = QLineEdit(fenetre)
 lineEditNom.setGeometry(150, 150, 100, 30)
@@ -56,10 +56,10 @@ lineEditPreNom.setGeometry(150, 150, 100, 30)
 grid.addWidget(labelPrenom, 2,2)
 grid.addWidget(lineEditPreNom, 2,3)
 
-lineEditMail = QLineEdit(fenetre)
-lineEditMail.setGeometry(350, 150, 100, 30)
-grid.addWidget(labelMail, 2,4)
-grid.addWidget(lineEditMail, 2,5)
+lineEditCourriel = QLineEdit(fenetre)
+lineEditCourriel.setGeometry(350, 150, 100, 30)
+grid.addWidget(labelCourriel, 2,4)
+grid.addWidget(lineEditCourriel, 2,5)
 
 lineEditTelephone = QLineEdit(fenetre)
 lineEditTelephone.setGeometry(450, 150, 100, 30)
