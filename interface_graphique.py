@@ -2,6 +2,7 @@
 # Importation des packages necessaire.
 from PyQt6.QtWidgets import QApplication, QWidget, QPushButton, QLineEdit, QTableWidget, QTableWidgetItem, QLabel,QGridLayout
 import gestion_donnees
+import operations_crud
 
 #Creation de notre fenêtre:
 app = QApplication([])
@@ -37,7 +38,7 @@ btn2 = QPushButton(fenetre)
 btn2.setText("INSERER")
 btn2.setGeometry(500, 150, 100, 30)
 grid.addWidget(btn2, 2,8)
-#btn2.clicked.connect(InsererDansTablePersonne)
+btn2.clicked.connect(operations_crud.Inserter)
 
 #Création des champs pour le bouton "inserer"
 labelTelephone = QLabel("Telephone :")
