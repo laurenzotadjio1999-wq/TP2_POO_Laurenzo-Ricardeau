@@ -10,7 +10,7 @@ def InsererDansAnnuaire():
     cursor = conn.cursor()
     # requette ici
     cursor.execute(
-        "INSERT INTO Annuaire VALUES (" + lineEditNom.text() + ",'" + lineEditPreNom.text() + "','" + lineEditcourriel.text() + "','" + lineEditTelephone.text() + "');")
+        "INSERT INTO Annuaire VALUES (" + interface_graphique.lineEditNom.text() + ",'" + interface_graphique.lineEditPreNom.text() + "','" + interface_graphique.lineEditcourriel.text() + "','" + interface_graphique.lineEditTelephone.text() + "');")
     conn.commit()
     AfficherTout()
 
@@ -24,11 +24,11 @@ def AfficherTout():
     cursor.execute("SELECT * FROM adresse")
     resultat = cursor.fetchall()
  # QTable
-    qtab.setRowCount(len(resultat))
-    qtab.setColumnCount(4)
-    qtab.setGeometry(50, 250, 450, 200)
-    qtab.setHorizontalHeaderLabels(['Nom', 'Prenom', 'Courriel', 'Telephone'])
+    interface_graphique.qtab.setRowCount(len(resultat))
+    interface_graphique.qtab.setColumnCount(4)
+    interface_graphique.qtab.setGeometry(50, 250, 450, 200)
+    interface_graphique.qtab.setHorizontalHeaderLabels(['Nom', 'Prenom', 'Courriel', 'Telephone'])
     #
     for i in range(len(resultat)):
         for j in range(4):
-            qtab.setItem(i, j, QTableWidgetItem(str(resultat[i][j])))
+            interface_graphique.qtab.setItem(i, j, QTableWidgetItem(str(resultat[i][j])))
