@@ -10,7 +10,7 @@ def InsererDansAnnuaire():
     cursor = conn.cursor()
     # requette ici
     cursor.execute(
-        "INSERT INTO Annuaire VALUES (" + interface_graphique.lineEditNom.text() + ",'" + interface_graphique.lineEditPreNom.text() + "','" + interface_graphique.lineEditcourriel.text() + "','" + interface_graphique.lineEditTelephone.text() + "');")
+        "INSERT INTO Annuaire VALUES (" + interface_graphique.lineEditNom.text() + ",'" + interface_graphique.lineEditPreNom.text() + "','" + interface_graphique.lineEditCourriel.text() + "','" + interface_graphique.lineEditTelephone.text() + "');")
     conn.commit()
     AfficherTout()
 

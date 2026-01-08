@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecac7d55-5bbb-4371-a619-be3b4ef86de6" name="Changes" comment="">
+    <list default="true" id="ecac7d55-5bbb-4371-a619-be3b4ef86de6" name="Changes" comment="MAJ bouton afficher">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/af42bdd0-dcfa-4023-8423-063de684676d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/af42bdd0-dcfa-4023-8423-063de684676d.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/operations_CRUD.py" beforeDir="false" afterPath="$PROJECT_DIR$/operations_CRUD.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -152,6 +153,17 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="interface_graphique" />
     <MESSAGE value="première mise à jour" />
@@ -162,6 +174,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Fonction afficherTout et QTable" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/TP2_POO_Laurenzo_Ricardeau$interface_graphique.coverage" NAME="interface_graphique Coverage Results" MODIFIED="1767392431774" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TP2_POO_Laurenzo_Ricardeau$interface_graphique.coverage" NAME="interface_graphique Coverage Results" MODIFIED="1767902348853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
