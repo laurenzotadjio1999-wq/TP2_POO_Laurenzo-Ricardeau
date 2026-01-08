@@ -7,6 +7,6 @@ def CreerTable():
     cursor = conn.cursor()
     # requette ici
     cursor.execute(
-        "CREATE TABLE if not exists adresse(Nom TEXT(255),Prenom TEXT(255), courriel TEXT(255),Telephone TEXT(10));")
+        "CREATE TABLE if not exists adresse(Nom TEXT,Prenom TEXT, Courriel TEXT,Telephone TEXT);")
     conn.commit()
 
