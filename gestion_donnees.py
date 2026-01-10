@@ -3,7 +3,7 @@ import sqlite3
 
 def CreerTable():
     print("créer la table")
-    conn = sqlite3.connect("Annuaire")
+    conn = sqlite3.connect("Annuaire.db")
     cursor = conn.cursor()
     # requette ici
     cursor.execute(
