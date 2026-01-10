@@ -5,7 +5,7 @@ import gestion_donnees
 #Créatiuon de la fonction Insérer
 def InsererDansAnnuaire(lineEditNom, lineEditPreNom, lineEditCourriel, lineEditTelephone, qtab):
     print("inser dans la table")
-    conn = sqlite3.connect("Annuaire")
+    conn = sqlite3.connect("Annuaire.db")
     cursor = conn.cursor()
     # requette ici
     cursor.execute(
@@ -21,7 +21,7 @@ def InsererDansAnnuaire(lineEditNom, lineEditPreNom, lineEditCourriel, lineEditT
 # Créatiuon de la fonction AfficherTout
 def AfficherTout(qtab):
     print("afficher toute la table")
-    conn = sqlite3.connect("Annuaire")
+    conn = sqlite3.connect("Annuaire.db")
     cursor = conn.cursor()
     # requette ici
     cursor.execute("SELECT * FROM adresse")
