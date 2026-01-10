@@ -38,7 +38,7 @@ btn2 = QPushButton(fenetre)
 btn2.setText("INSERER")
 btn2.setGeometry(500, 150, 100, 30)
 grid.addWidget(btn2, 2,8)
-btn2.clicked.connect(operations_CRUD.InsererDansAnnuaire)
+btn2.clicked.connect(lambda: operations_CRUD.InsererDansAnnuaire(lineEditNom, lineEditPreNom, lineEditCourriel, lineEditTelephone, qtab))
 
 #Création des champs pour le bouton "inserer"
 labelTelephone = QLabel("Telephone :")
@@ -71,7 +71,7 @@ btn3 = QPushButton(fenetre)
 btn3.setText("AfficherTout")
 btn3.setGeometry(500, 250, 100, 30)
 grid.addWidget(btn3, 5,8)
-btn3.clicked.connect(operations_CRUD.AfficherTout)
+btn3.clicked.connect(lambda :operations_CRUD.AfficherTout(qtab))
 
 
 #Création du boutton "modifier"
