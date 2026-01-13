@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecac7d55-5bbb-4371-a619-be3b4ef86de6" name="Changes" comment="MAJ bouton afficher">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/af42bdd0-dcfa-4023-8423-063de684676d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/af42bdd0-dcfa-4023-8423-063de684676d.xml" afterDir="false" />
+    <list default="true" id="ecac7d55-5bbb-4371-a619-be3b4ef86de6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/operations_CRUD.py" beforeDir="false" afterPath="$PROJECT_DIR$/operations_CRUD.py" afterDir="false" />
     </list>
@@ -176,6 +175,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Fonction afficherTout et QTable" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/TP2_POO_Laurenzo_Ricardeau$interface_graphique.coverage" NAME="interface_graphique Coverage Results" MODIFIED="1768067496244" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TP2_POO_Laurenzo_Ricardeau$interface_graphique.coverage" NAME="interface_graphique Coverage Results" MODIFIED="1768328115195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
