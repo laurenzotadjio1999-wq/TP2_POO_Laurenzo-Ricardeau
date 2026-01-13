@@ -89,16 +89,16 @@ qtab.setHorizontalHeaderLabels([ 'Nom', 'Prénom', 'Courriel','Téléphone'])
 grid.addWidget(qtab, 5, 0, 2, 8)
 
 #2- Créer un boutton supprimer
-labelSuppID = QLabel("ID :")
+labelSuppNom = QLabel("Nom :")
 btn5 = QPushButton(fenetre)
 btn5.setText("SUPPRIMER")
 btn5.setGeometry(500, 200, 100, 30)
 grid.addWidget(btn5, 4,8)
-#btn5.clicked.connect(SupprimerId)
-lineEditSuppID = QLineEdit(fenetre)
-lineEditSuppID.setGeometry(350, 200, 100, 30)
-grid.addWidget(labelSuppID, 4,6)
-grid.addWidget(lineEditSuppID, 4,7 )
+btn5.clicked.connect(lambda: operations_CRUD.SupprimerParNom(lineEditNom, qtab))
+lineEditSuppNom = QLineEdit(fenetre)
+lineEditSuppNom.setGeometry(350, 200, 100, 30)
+grid.addWidget(labelSuppNom, 4,6)
+grid.addWidget(lineEditSuppNom, 4,7 )
 
 
 
