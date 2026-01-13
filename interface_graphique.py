@@ -84,12 +84,15 @@ grid.addWidget(btn4, 3,8)
 qtab = QTableWidget(fenetre)
 qtab.setRowCount(8)
 qtab.setColumnCount(4)
-qtab.setGeometry(100, 250, 450, 200)
+#qtab.setGeometry(100, 250, 450, 200)
+qtab.setMinimumHeight(200)
+qtab.setMinimumWidth(450)
 qtab.setHorizontalHeaderLabels([ 'Nom', 'Prénom', 'Courriel','Téléphone'])
 grid.addWidget(qtab, 7, 0, 2, 8)
 
+
 #2- Créer un boutton supprimer
-labelSuppNom = QLabel("Nom :")
+labelSuppNom = QLabel("Nom à supprimer :")
 btn5 = QPushButton(fenetre)
 btn5.setText("SUPPRIMER")
 btn5.setGeometry(500, 200, 100, 30)
