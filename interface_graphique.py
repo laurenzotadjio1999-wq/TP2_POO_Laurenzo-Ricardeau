@@ -91,7 +91,7 @@ qtab.setMinimumWidth(450)
 qtab.setHorizontalHeaderLabels([ 'Nom', 'Prénom', 'Courriel','Téléphone'])
 grid.addWidget(qtab, 7, 0, 2, 8)
 qtab.cellClicked.connect(
-    lambda row, column: operations_CRUD.RemplirChampsDepuisTableau(
+    lambda row, column: operations_CRUD.Remplir_auto(
         qtab, lineEditNom, lineEditPreNom, lineEditCourriel, lineEditTelephone, row, column
     )
 )
