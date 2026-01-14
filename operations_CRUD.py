@@ -4,7 +4,7 @@ import gestion_donnees
 
 #Créatiuon de la fonction Insérer
 def InsererDansAnnuaire(lineEditNom, lineEditPreNom, lineEditCourriel, lineEditTelephone, qtab):
-    print("inser dans la table")
+    print("inserer dans la table")
     conn = sqlite3.connect("Annuaire.db")
     cursor = conn.cursor()
     # requette ici
@@ -44,6 +44,35 @@ def SupprimerParNom(lineEditNom, qtab):
     cursor = conn.cursor()
     # requette ici
     cursor.execute("DELETE FROM adresse WHERE Nom = ?", (lineEditNom.text(),))
+    conn.commit()
+    conn.close()
+    # rafraîchir l’affichage
+    AfficherTout(qtab)
+
+def Remplir_auto(qtab, lineEditNom, lineEditPreNom, lineEditCourriel, lineEditTelephone, row, column):
+        # Récupérer les valeurs de la ligne sélectionnée
+        nom = qtab.item(row, 0).text()
+        prenom = qtab.item(row, 1).text()
+        courriel = qtab.item(row, 2).text()
+        telephone = qtab.item(row, 3).text()
+        # Remplir les champs correspondants dans le formulaire
+        lineEditNom.setText(nom)
+        lineEditPreNom.setText(prenom)
+        lineEditCourriel.setText(courriel)
+        lineEditTelephone.setText(telephone)
+        # Mettre en évidence la ligne sélectionnée (effet visuel)
+        qtab.selectRow(row)
+
+def Modifier(lineEditNom, lineEditPreNom, lineEditCourriel, lineEditTelephone, qtab):
+    nom = lineEditNom.text().strip()
+    prenom = lineEditPreNom.text().strip()
+    courriel = lineEditCourriel.text().strip()
+    telephone = lineEditTelephone.text().strip()
+    print("Modifier dans la table")
+    conn = sqlite3.connect("Annuaire.db")
+    cursor = conn.cursor()
+    # requette ici
+    cursor.execute("""UPDATE adresse SET Nom=?,Prenom=?,Telephone=? WHERE Courriel = ?;""", (nom, prenom, telephone, courriel))
     conn.commit()
     conn.close()
     # rafraîchir l’affichage
