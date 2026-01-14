@@ -79,6 +79,7 @@ btn4 = QPushButton(fenetre)
 btn4.setText("MODIFIER")
 btn4.setGeometry(500, 250, 100, 30)
 grid.addWidget(btn4, 3,8)
+btn4.clicked.connect(lambda: operations_CRUD.Modifier(lineEditNom, lineEditPreNom, lineEditCourriel, lineEditTelephone, qtab))
 
 # Création du "QTable" pour l'affichage des différents enregistrements
 qtab = QTableWidget(fenetre)
@@ -89,7 +90,11 @@ qtab.setMinimumHeight(200)
 qtab.setMinimumWidth(450)
 qtab.setHorizontalHeaderLabels([ 'Nom', 'Prénom', 'Courriel','Téléphone'])
 grid.addWidget(qtab, 7, 0, 2, 8)
-
+qtab.cellClicked.connect(
+    lambda row, column: operations_CRUD.RemplirChampsDepuisTableau(
+        qtab, lineEditNom, lineEditPreNom, lineEditCourriel, lineEditTelephone, row, column
+    )
+)
 
 #2- Créer un boutton supprimer
 labelSuppNom = QLabel("Nom à supprimer :")
