@@ -38,12 +38,12 @@ def AfficherTout(qtab):
             qtab.setItem(i, j, QTableWidgetItem(str(resultat[i][j])))
 
 
-def SupprimerParNom(lineEditNom, qtab):
+def SupprimerParNom(lineEditSuppNom, qtab):
     print("Supprimer dans la table")
     conn = sqlite3.connect("Annuaire.db")
     cursor = conn.cursor()
     # requette ici
-    cursor.execute("DELETE FROM adresse WHERE Nom = ?", (lineEditNom.text(),))
+    cursor.execute("DELETE FROM adresse WHERE Nom = ?", (lineEditSuppNom.text(),))
     conn.commit()
     conn.close()
     # rafraîchir l’affichage
