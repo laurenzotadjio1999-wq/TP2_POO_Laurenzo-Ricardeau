@@ -56,5 +56,13 @@ Pour effectuer une modification il faut :
 Il suffit de saisir le nom du contact à supprimer et de cliquer sur « Supprimer »
 <img width="864" height="668" alt="image" src="https://github.com/user-attachments/assets/99889f89-59c0-4a20-b1be-035df0f4c17c" />
 <img width="864" height="643" alt="image" src="https://github.com/user-attachments/assets/3478a978-bb6c-40ab-8244-83b77ea1e86f" />
- 
+
+
+Copyrigth Laurenzo&Ricardeau
+
+📘 Projet : TP2 – Programmation Orientée Objet (POO)
+
+📅 Année : 2026
+
+Collège Bois-de-Boulogne — Spécialité : Infrastructures informatiques et cybersécurité
  
